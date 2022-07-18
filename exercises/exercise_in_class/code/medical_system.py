@@ -35,18 +35,20 @@ money = 0
 """
 
 
-def set_names():
+def run():
     global patients, specialties, specialties_dict, money
 
     while len(patients) < 3:
-        patients.append(input(f'Please enter the patient\'s name - Available [{len(patients)} / 3]: '))
+        patients.append(input(f'[-] Please enter the patient\'s name - Available [{len(patients)} / 3]: '))
+        #print(f'    {patients}')
         system('clear')
 
-        print("The specialties and it's costs are:")
+        print("[-] The specialties and it's costs are:")
         for index in specialties_dict.keys():
-            print(f'Specialties: {index} - Value: {specialties_dict[index]}')
+            print(f'     > {index} - Value: {specialties_dict[index]}')
+        print('\n')
         
-        specialties.append(input(f'Please write down the speacialty [A, B or C] you want to assist! '))
+        specialties.append(input(f'Please write down the speacialty [A, B or C] you want to assist: '))
         system('clear')
     
     for index in specialties:
@@ -57,11 +59,9 @@ def set_names():
         elif index == 'C':
             money += 50
     
-    print(f'Money Collected: {money}')
-
-
-def run():
-    set_names()
+    print(f'Patients: {patients}')
+    print(f'Specialties: {specialties}')
+    print(f'Money Collected: {money}', end='\n\n')
 
 
 if __name__ == '__main__':
