@@ -36,6 +36,7 @@ def ask_for_limits():
     lower_limit = int(input('--- Please enter a value for the lower limit: '))
     #sleep(1/2)
     system('clear')
+
     upper_limit = int(input('--- Please enter a value for the upper limit: '))
     #sleep(1/2)
     system('clear')
@@ -72,6 +73,7 @@ def sum_values_in_range(lower_limit, upper_limit):
 
     for index in range_values:
         sum_of_range_values += index
+    
     print(f' [1]. The sum of the range values is: {sum_of_range_values}.')
     print(f'      Because range values are: {range_values}')
     print('\n')
