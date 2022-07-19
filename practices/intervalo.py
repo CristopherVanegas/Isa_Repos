@@ -15,24 +15,33 @@ while lim_inf > lim_sup :
     lim_sup = int (input ('Introducir (correctamente) el limite superior del intervalo: '))
 
 
-num = int(input (' \n Introduce un numero (0 para salir): '))
+# num = int(input (' \n Introduce un numero (0 para salir): '))
+stop = False
+while stop == False:
+    num = int(input('Introduce un numero (0, para salir): '))
 
-while num != 0:
-    if num > lim_inf and num < lim_sup : # Pertenece al intervalo
+    # Pertenece al intervalo
+    if num > lim_inf and num < lim_sup:
         suma_dentro_intervalo += num
-
-    if num < lim_inf or num > lim_sup: # No pertenece al intervalo
+    
+    # No pertenece al intervalo
+    if num < lim_inf or num > lim_sup:
         cont_fuera_intervalo += 1
     
     # Numero igual a alguno de los limites
     if num == lim_inf or num == lim_sup :
         igual_limites = True
-    num = int(input ( 'Introduce un numero(0, para salir): '))
+    
+    # Break Condition
+    elif num == 0:
+        stop = True
+    
+    
 
 
 print(' \n RESULTSADOS: ')
 print(f'Suma dentro de intervalo: {suma_dentro_intervalo}')
-print(f'Contador fuera de intervalos: {cont_fuera_intervalo}')
+print(f'Números fuera de intervalos: {cont_fuera_intervalo}')
 print(f'Iguales a los límites: {igual_limites}')
 
 
