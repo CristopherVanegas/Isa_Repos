@@ -21,7 +21,7 @@ from os import system
 specialties_dict = {
     "[A]: pediatrics": 50,
     "[B]: cardiology": 70,
-    "[C]: dematology": 50
+    "[C]: dermatology": 50
 }
 
 patients = []
