@@ -10,6 +10,8 @@ def sum():
         print(f'>>> Index: {index}, The result is: {result}')
 
     """
+    # PRINCIPIO DE SOLUCIÓN
+    
     result = 0
     for index in range(1, 6):
         result += index
