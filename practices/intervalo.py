@@ -7,7 +7,7 @@ lim_inf = int(input('Introduce el limite inferior del intervalo: '))
 lim_sup = int(input('Introduce el limite superior del intervalo: '))
 
 
-while lim_inf  > lim_sup :
+while lim_inf > lim_sup :
     print("El limite inferior no puede ser mayor al superior.")
     print("VUELVE a introducir los limites. \n ")
     
@@ -16,12 +16,15 @@ while lim_inf  > lim_sup :
 
 
 num = int(input (' \n Introduce un numero (0 para salir): '))
+
 while num != 0:
     if num > lim_inf and num < lim_sup : # Pertenece al intervalo
         suma_dentro_intervalo += num
-    if num < lim_inf and num > lim_sup: # No pertenece al intervalo
+
+    if num < lim_inf or num > lim_sup: # No pertenece al intervalo
         cont_fuera_intervalo += 1
-        # Numero igual a alguno de los limites
+    
+    # Numero igual a alguno de los limites
     if num == lim_inf or num == lim_sup :
         igual_limites = True
     num = int(input ( 'Introduce un numero(0, para salir): '))
