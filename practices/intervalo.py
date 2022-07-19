@@ -29,20 +29,18 @@ while stop == False:
         cont_fuera_intervalo += 1
     
     # Numero igual a alguno de los limites
-    if num == lim_inf or num == lim_sup :
+    if num == lim_inf or num == lim_sup:
         igual_limites = True
     
     # Break Condition
-    elif num == 0:
+    if num == 0:
         stop = True
-    
-    
 
 
 print(' \n RESULTSADOS: ')
 print(f'Suma dentro de intervalo: {suma_dentro_intervalo}')
 print(f'Números fuera de intervalos: {cont_fuera_intervalo}')
-print(f'Iguales a los límites: {igual_limites}')
+print(f'Números repetidos a los límites: {igual_limites}')
 
 
 
